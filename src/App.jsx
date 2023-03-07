@@ -11,10 +11,8 @@ import NavBar from './Components/NavBar/NavBar'
 
 function App() {
 
-  return (
-  
-        
-        <>
+  return (    
+        <div>
            <div className='sticky top-0 z-50'>
         <NavBar />
         </div>
@@ -29,7 +27,7 @@ function App() {
         
 
     </div>
-        </>
+        </div>
 
   )
 }
