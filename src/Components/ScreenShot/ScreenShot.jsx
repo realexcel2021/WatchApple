@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Pagination, Navigation } from "swiper";
-import HoverComponent from './HoverComponent';
+
 
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -18,8 +18,6 @@ function ScreenShot() {
         slidesToShow: 1,
       slidesToScroll: 1
       };
-
-    let Hover = <HoverComponent />
 
     if(Comp){
         Hover = (
