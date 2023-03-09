@@ -4,19 +4,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Pagination, Navigation } from "swiper";
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 
 function ScreenShot() {
 
   return (
     <div className=' my-16 px-24 sm:px-3' id='screenshot'>
-    <h1 className='uppercase text-4xl text-center sm:text-3xl'> app <b>ScreenShot</b> </h1>
-    <hr className=' border-secondary mt-6 mb-7 mx-auto max-w-[50px] text-center border-y-2'/>
-
+        <ScrollAnimation animateIn='fadeIn'>
+              <h1 className='uppercase text-4xl text-center sm:text-3xl'> app <b>ScreenShot</b> </h1>
+              <hr className=' border-secondary mt-6 mb-7 mx-auto max-w-[50px] text-center border-y-2'/>
+        </ScrollAnimation>
     <div className='sm:mx-10'>
+    
+    <ScrollAnimation animateIn='wobble' initiallyVisible={true}>
     <Swiper
     className='py-16'
     slidesPerView={1}
@@ -42,6 +46,8 @@ function ScreenShot() {
             
         ))}
   </Swiper>
+    </ScrollAnimation>
+
     </div>
 </div>
   )

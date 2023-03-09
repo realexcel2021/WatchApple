@@ -40,21 +40,21 @@ function NavBar() {
                           }
                         }}>
                           
-                          <NavHashLink className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3' smoothe onClick={() => openState} to='/#home'>Home</NavHashLink>
+                          <NavHashLink className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3' smoothe onClick={openState} to='/#home'>Home</NavHashLink>
                           <NavHashLink className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3'  to='/#features' onClick={openState}>Features</NavHashLink>
                           <NavHashLink onClick={openState} className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3'   to='/#testimonial'>Testimonial</NavHashLink>
                           <NavHashLink onClick={openState} className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3'  to='/#screenshot'>Screenshots</NavHashLink>
-                          <NavHashLink onClick={() => openState} className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3'  to='/#contact'>Contact Us</NavHashLink>
+                          <NavHashLink onClick={openState} className='sm:text-xl sm:p-3 sm:uppercase sm:text-primary border-primary border sm:m-3'  to='/#contact'>Contact Us</NavHashLink>
                           <button className='px-2 py-2 uppercase text-primary bg-secondary rounded sm:mx-5 sm:my-5 sm:bg-black'>Downlaod</button>  
                           
                         </Drawer>
                     </Hidden>
                 </Grid>
                 <nav className='flex text-xl space-x-3 uppercase text-gray-600 items-center sm:hidden md:hidden'>
-                        <NavHashLink style={ confirmHash("#home") ? {borderBottom : "2px solid black"} : null } smoothe onClick={(event) => delayLink(event, '#home')} to='/#home'>Home</NavHashLink>
+                        <NavHashLink style={ confirmHash("#home") ? {borderBottom : "2px solid black"} : null } smoothe onClick={() => setOpen(false)} to='/#home'>Home</NavHashLink>
                         <NavHashLink style={ confirmHash("#features") ? {borderBottom : "2px solid black"} : null }  to='/#features' onClick={(event) => delayLink(event, '#features')}>Features</NavHashLink>
                         <NavHashLink onClick={() => setOpen(false)} style={ confirmHash("#testimonial") ? {borderBottom : "2px solid black"} : null }  to='/#testimonial' >Testimonial</NavHashLink>
-                        <NavHashLink style={ confirmHash("#screenshot") ? {borderBottom : "2px solid black"} : null }  to='/#screenshot'>Screenshots</NavHashLink>
+                        <NavHashLink style={ confirmHash("#screenshot") ? {borderBottom : "2px solid black"} : null }  to='/#screenshot' onClick={() => setOpen(false)}>Screenshots</NavHashLink>
                         <NavHashLink style={ confirmHash("#contact") ? {borderBottom : "2px solid black"} : null }  to='/#contact'>Contact Us</NavHashLink>
                         <button className='px-2 py-2 uppercase text-primary bg-secondary rounded'>Downlaod</button>
                    </nav>
